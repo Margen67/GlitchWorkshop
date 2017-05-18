@@ -1,0 +1,2 @@
+/home/chris/android_projects/ImageBender/app/CMakeFiles/edit_cache.dir
+/home/chris/android_projects/ImageBender/app/CMakeFiles/rebuild_cache.dir

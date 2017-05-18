@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chris/android_projects/ImageBender/app/src/cpp/native.cpp
+jni.h
+-
+glitch-common.h
+/home/chris/android_projects/ImageBender/app/src/cpp/glitch-common.h
+
+src/cpp/include/glitch-common.h
+

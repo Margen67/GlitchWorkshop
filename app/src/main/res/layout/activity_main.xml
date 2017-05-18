@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.chris.imagebender.MainActivity"
+    android:background="@android:color/holo_blue_dark"
+    android:backgroundTint="?android:attr/textColorTertiary"
+    android:backgroundTintMode="src_over">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/gradient_bg">
+
+        <com.example.chris.imagebender.BendingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:id="@+id/ImgDest"
+            android:maxHeight="400dp"
+            android:maxWidth="400dp"
+            android:fitsSystemWindows="false"
+            android:elevation="0dp"
+            android:adjustViewBounds="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:onClick="onBendClick"
+            android:layout_centerInParent="true"
+            android:paddingBottom="100dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="570dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/toolbar_border">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnOpen"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/open_icon"
+                        android:layout_weight="0.17" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnOptions"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/options_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnUndo"
+                        android:background="@drawable/undo_icon"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnRedo"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/redo_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnReload"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/reload_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnSave"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/save_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnCamera"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/camera_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnPreferences"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/preferences_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnHelp"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/help_icon" />
+                    <com.example.chris.imagebender.ToolbarButton
+                        android:layout_width="@dimen/main_scrollbar_icon_width"
+                        android:layout_height="@dimen/main_scrollbar_icon_height"
+                        android:id="@+id/btnAbout"
+                        android:layout_marginRight="@dimen/main_scrollbar_icon_margin"
+                        android:layout_marginLeft="@dimen/main_scrollbar_icon_margin"
+                        android:background="@drawable/about_icon" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

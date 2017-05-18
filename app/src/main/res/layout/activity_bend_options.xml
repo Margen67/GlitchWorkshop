@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bend_options"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chris.imagebender.BendOptionsActivity"
+    android:background="@android:color/holo_blue_dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleDatamode"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textOff="@string/strRawDataMode"
+            android:textOn="@string/strPixelDataMode" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/groupAlgoChoices"
+        android:checkedButton="@+id/xorChoice">
+
+        <RadioButton
+            android:text="@string/strOpXor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="264dp"
+            android:layout_marginEnd="264dp"
+            android:id="@+id/xorChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupAlgoChoices"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/orChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/StrOpAnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/andChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mulChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/divChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpDivide64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/div64Choice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpRevSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/revXorChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpRBit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbitChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpRByte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbyteChoice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/strOpPixelSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pixelSortChoice"
+            android:layout_below="@+id/groupAlgoChoices"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/groupAlgoChoices"
+        android:layout_alignParentEnd="true">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinSelectSortMode"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dialog"
+            android:entries="@array/strArraySortModes" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinForceFormat"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dialog"
+            android:entries="@array/strArrayForceFmtOptions" />
+
+        <Button
+            android:text="@string/strBtnDataSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDataSourceSelection"
+            android:layout_marginBottom="45dp"
+            android:layout_above="@+id/spinForceFormat"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="@string/strForcedImageFmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="45dp"
+            android:id="@+id/txtForcedImageFmt"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

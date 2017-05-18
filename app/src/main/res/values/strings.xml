@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Glitch Workshop</string>
+    <string name="btnLoad">Load Image</string>
+    <string name="btnBend">Bend Image</string>
+    <string name="btnSave">Save Image</string>
+    <string name="btnBendOptions">Options</string>
+    <string name="strDataChoiceExplanation">Select the source of data that will be used for your selected operation. If you select Random Number a random pixel value will be generated and used to perform the operation on each pixel of the loaded image. If you select Constant Number you will get to choose the value that is used. If you select text you may input text that will be used as raw data to perform the operation. Finally, if you select Image you will be able to select an image that will be resized to your current image\'s size and used as a data source for all operations.</string>
+    <string name="strLoadVideo">Load Video</string>
+    <string name="strReloadImage">Reload Image</string>
+    <string name="strOpXor">Xor</string>
+    <string name="strOpOr">Or</string>
+    <string name="StrOpAnd">And</string>
+    <string name="strOpAdd">Add</string>
+    <string name="strOpSubtract">Subtract</string>
+    <string name="strOpMultiply">Multiply</string>
+    <string name="strOpDivide">Divide</string>
+    <string name="strOpDivide64">Divide 64-bit</string>
+    <string name="strOpRevSub">Reverse Subtract</string>
+    <string name="strOpRBit">Reverse Bits</string>
+    <string name="strOpRByte">Reverse Bytes</string>
+    <string name="strOpPixelSort">Sort Pixels</string>
+    <string name="strBtnDataSource">Select Data Source</string>
+    <string name="strRandomNumberSrc">Random Number</string>
+    <string name="strConstantNumberSrc">Constant Number</string>
+    <string name="strTextSrc">Text</string>
+    <string name="strImageSrc">Image</string>
+    <string name="strNumberSrcHint">Enter a number from 0 to 255</string>
+    <string name="strTextSrcHint">Enter any text</string>
+    <string name="strBtnLoadImage">Load Image</string>
+    <string name="strTakeImage">Camera</string>
+    <string name="strRawDataMode">Raw Data Mode</string>
+    <string name="strPixelDataMode">Pixel Data Mode</string>
+    <string name="strRawDataWarning">In raw data mode operations will be performed on the individual bytes of the input file. This can produce unpredictable results depending on the file format and may possibly crash the program.</string>
+    <string-array name="strArrayForceFmtOptions">
+        <item>None</item>
+        <item>JPEG (recommended)</item>
+        <item>PNG</item>
+    </string-array>
+    <string-array name="strArraySortModes">
+        <item>Black</item>
+        <item>Bright</item>
+        <item>White</item>
+    </string-array>
+    <string-array name="strArrayOutputFormat">
+        <item>JPEG (fastest)</item>
+        <item>PNG (slowest)</item>
+        <item>WEBP</item>
+    </string-array>
+    <string name="strForcedImageFmt">Forced Image Format</string>
+    <string name="strOpenPreferences">Preferences</string>
+    <string name="strOutputFileFormat">Output file format</string>
+    <string name="strPreserveOriginalAlpha">Preserve original image transparency</string>
+    <string name="strReopenLast">Restore previous projects</string>
+    <string name="strResetDefaults">Reset All</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About Glitch Workshop</string>
+</resources>
